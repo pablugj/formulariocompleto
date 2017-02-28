@@ -1,0 +1,108 @@
+<!Doctype>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Mi examen</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/stilos.css">
+	<script src="jquery-1.10.2.min.js"></script>
+	<!-- <script src="jquery.validate.js"></script> -->
+	<script type="text/javascript">
+		
+
+
+	</script>
+</head>
+<body>
+<div id="principal">
+	<header>
+		Registro
+		<p><input class="publicar" type="button" value="Ver" id="uno" />
+		<input class="publicar" value="Ocultar" type="button" id="dos" /></p>
+	</header>
+<form id="form" class="form">
+	<p>
+<p><input type="text" required placeholder="Nombre" id="nombre" name="nombre" class="nombre" /></p></p>
+
+<p><input type="text" required placeholder="Apellidos" name="apellido"/></p>
+
+<p><input type="email" required placeholder="Email" name="email" /></p>
+
+<p><input type="url" required placeholder="URL" name="url" /></p>
+
+<p><input type="datetime" name="time" placeholder="dd/mm/aa" /></p> 
+
+<p><input name="valor" type="number" min="0" max="10" step="1" required value="5" /></p>
+
+<p><select>
+	<option value="">Elige</option>
+	<option value="1">Ciencia</option>
+	<option value="2">Tecnologia</option>
+	<option value="3">Ocio</option>
+</select></p>
+
+<fieldset>
+<p><input required type="text" placeholder="nombre de usuario" name="user" />
+<p><input required type="password" placeholder="pass" name="pass" />
+<p><input type="password" placeholder="repetir contraseña" name="pass2" />
+</fieldset>
+
+<fieldset>
+<p><input checked type="radio" name="opc" />Deseo recibir noticias</p>
+<p><input type="radio" name="opc" />No deseo recibir noticias<p>
+<p><input type="checkbox" name="opc2" />Acepto todos los terminos<p>
+</fieldset>
+
+<p><input type="submit" value="Crear cuenta" /><p>
+</form>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+
+    $(function(){
+        //alert("Cargo la pagina");
+        function actividad(){
+            $('#form').slideToggle();
+            console.log('Si estoy');
+        }
+       $('#uno').on('click',actividad);
+ 						
+ 						/*$('#form').validate({
+ 												rules:{
+ 													nombre:{
+ 														required:true,
+ 														minlength:4,
+ 														maxlength:7
+ 													},
+ 													email:{
+ 														required:true,
+ 														email:true
+ 													},
+ 													valor:{
+ 														required:true,
+ 														number:true
+ 													}
+
+ 												},
+ 												messages:{
+ 													nombre:{
+ 															required:"Debes incluir un nombre",
+ 															minlength:"El nombre debe llevar por lo menos 4 caracteres",
+ 															maxlength:"No mas de 7 caracteres"
+ 													},
+ 													email:{
+ 															required:"No has introducido un e-mail",
+ 															email:"Estructura no valida"
+ 													},
+ 													valor:{
+ 														required:"No debe ir vacio",
+ 														number:"Debes poner un numero"
+ 													}
+ 												}
+
+ 						});*/
+    });
+</script>
